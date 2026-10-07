@@ -1,0 +1,44 @@
+面向 Agent 安全工程师，你的转型主线可以定为：
+
+云防火墙 / 云 WAF → AI 安全网关 → Agent 权限治理 → RAG / MCP / Skill 防护 → 行为审计与运营。
+
+结合字节跳动云上 AI 安全岗位来看，他们更看重：LLM/Agent/MCP 风险认知、云原生安全、Go/Python 开发能力、威胁建模、策略与流程落地。 你之前的云 WAF/防火墙经验正好能迁移到“AI 安全网关、工具白名单、出口控制、审计日志”。
+
+4 周转型计划
+周次   目标   关键动作
+第1周   对齐 Agent 风险框架   读 OWASP ASI01–ASI10、AST01–AST10、MITRE ATLAS；画一张“Agent 全链路风险图”；整理云 WAF→Agent 安全网关对照表。
+
+第2周   掌握 RAG / MCP / Skill / 工具安全   输出 RAG 风险矩阵、MCP 工具描述注入防护清单、Skill 供应链治理清单；设计 Agent 安全网关草案。
+
+第3周   跑通红队实验   用 Garak/PromptFoo 做提示注入、越狱、工具滥用测试；自建最小 Agent，复现间接提示注入、记忆投毒、越权工具调用。
+
+第4周   包装项目 + 面试   完成“企业 Agent 安全网关原型”项目文档；准备 ASI/AST 场景题、RAG/MCP 防护题、人工确认机制题。
+
+重点资料优先级
+
+必读框架：
+OWASP Top 10 for Agentic Applications 2026（ASI01–ASI10）
+OWASP Agentic Skills Top 10（AST01–AST10）
+MITRE ATLAS
+NIST AI RMF
+
+实战工具：
+Garak：Agent/LLM 红队扫描
+PromptFoo：提示注入与越狱测试
+LangChain / LangGraph / LlamaIndex
+NeMo Guardrails / AI Firewall 类产品文档
+
+补充阅读：
+《大模型安全权威指南》yeasy GitBook：打底用，但建议搭配 OWASP 官方文档交叉验证。
+360 智能体安全报告：重点看 Skill 攻击面和“意图检测、环境隔离、逻辑纠偏”。
+
+面试时重点准备这些题
+
+ASI01 目标劫持、ASI02 工具滥用、ASI03 权限滥用怎么防？
+AST01 恶意 Skill、AST02 供应链投毒、AST03 过度授权怎么治理？
+RAG 间接提示注入、记忆投毒如何防护？
+MCP 工具描述注入、参数注入、返回值污染如何防御？
+Agent 高风险操作为什么需要人工确认？确认前后如何做权限、版本、幂等和审计？
+如何用云 WAF/防火墙经验设计 AI 安全网关？
+
+如果你愿意，下一步我可以直接按字节跳动云上 AI 安全岗位 JD，帮你整理一份 简历改写版 + 面试问答稿，把云 WAF 经验直接翻译成 Agent 安全能力。
